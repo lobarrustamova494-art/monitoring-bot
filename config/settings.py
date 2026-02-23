@@ -12,8 +12,8 @@ class Settings(BaseSettings):
     DATABASE_POOL_SIZE: int = 20
     DATABASE_MAX_OVERFLOW: int = 40
     
-    # Redis
-    REDIS_URL: str
+    # Redis (Optional)
+    REDIS_URL: str = ""
     
     # Limits
     MAX_CHANNELS_PER_USER: int = 50

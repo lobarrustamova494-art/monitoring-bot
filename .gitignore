@@ -28,8 +28,8 @@ wheels/
 .env.local
 
 # Pyrogram session
-*.session
-*.session-journal
+# *.session - Commented out for production deployment
+# *.session-journal - Commented out for production deployment
 
 # Logs
 logs/
@@ -67,4 +67,4 @@ check_*.py
 debug_*.py
 watch_*.py
 test_bot.db
-newsbot_session.session
+# newsbot_session.session - Commented out for production deployment

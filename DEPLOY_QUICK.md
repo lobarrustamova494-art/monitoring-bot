@@ -28,8 +28,10 @@ REDIS_URL=redis://...
 
 ## 4. Database & Redis
 - "New +" > "PostgreSQL" - Database yarating
-- "New +" > "Redis" - Redis yarating
+- "New +" > "Key Value Store" - Redis yarating (Optional, free plan da yo'q)
 - URL larni Environment Variables ga qo'shing
+
+**Eslatma:** Free plan da Redis (Key Value Store) mavjud emas. REDIS_URL ni bo'sh qoldiring yoki o'chirmasangiz ham bo'ladi - bot Redis siz ham ishlaydi.
 
 ## 5. Deploy
 "Create Web Service" > Kutish > Tayyor! ✅

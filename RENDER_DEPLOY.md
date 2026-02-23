@@ -60,11 +60,13 @@ REDIS_URL=redis://host:6379/0
 3. Internal Database URL ni nusxalang
 4. Environment Variables ga `DATABASE_URL` sifatida qo'shing
 
-### 3.2. Redis yarating
-1. Render dashboard da "New +" > "Redis"
+### 3.2. Redis yarating (Optional - Free plan uchun mavjud emas)
+1. Render dashboard da "New +" > "Key Value Store" (bu Redis)
 2. Redis instance yarating
 3. Internal Redis URL ni nusxalang
 4. Environment Variables ga `REDIS_URL` sifatida qo'shing
+
+**Muhim:** Free plan da Redis/Key Value Store mavjud emas. Bot Redis siz ham ishlaydi, faqat caching bo'lmaydi.
 
 ## 4. Session File
 

@@ -26,10 +26,15 @@ class EventMonitoringService:
     async def init_redis(self):
         """Initialize Redis connection"""
         try:
+            if not settings.REDIS_URL:
+                logger.warning("REDIS_URL not set, caching disabled")
+                self.redis = None
+                return
+            
             self.redis = await redis.from_url(settings.REDIS_URL, decode_responses=True)
             logger.info("Redis initialized for event monitoring")
         except Exception as e:
-            logger.error(f"Redis initialization failed: {e}")
+            logger.warning(f"Redis initialization failed: {e}. Continuing without cache.")
             self.redis = None
     
     def register_handlers(self):
