@@ -15,17 +15,17 @@ Preparing metadata (pyproject.toml): finished with status 'error'
       💥 maturin failed
         Caused by: Cargo metadata failed. Does your crate compile with `cargo build`?
         Caused by: `cargo metadata` exited with an error:
-      Error running maturin: Command '['maturin', 'pep517', 'write-dist-info', '--metadata-directory', '/tmp/pip-modern-metadata-3ahqlfjn', '--interpreter', '/opt/render/project/src/.venv/bin/python3.14']' returned non-zero exit status 1.
+      Error running maturin: Command '['maturin', 'pep517', 'write-dist-info', '--metadata-directory', '/tmp/pip-modern-metadata-xvinj0zf', '--interpreter', '/opt/render/project/src/.venv/bin/python3.14']' returned non-zero exit status 1.
       Checking for Rust toolchain....
-      Running `maturin pep517 write-dist-info --metadata-directory /tmp/pip-modern-metadata-3ahqlfjn --interpreter /opt/render/project/src/.venv/bin/python3.14`
+      Running `maturin pep517 write-dist-info --metadata-directory /tmp/pip-modern-metadata-xvinj0zf --interpreter /opt/render/project/src/.venv/bin/python3.14`
       [end of output]
   
   note: This error originates from a subprocess, and is likely not a problem with pip.
-[notice] A new release of pip is available: 25.3 -> 26.0.1
-[notice] To update, run: pip install --upgrade pip
 error: metadata-generation-failed
 × Encountered error while generating package metadata.
 ╰─> pydantic-core
 note: This is an issue with the package mentioned above, not pip.
 hint: See above for details.
 ==> Build failed 😞
+Menu
+==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys
