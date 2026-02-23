@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Channel Monitor - Telegram Bot</title>
+    <link rel="icon" type="image/png" href="bot dark logo.png">
+    <link rel="apple-touch-icon" href="bot dark logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <!-- Floating Particles -->
+    <div id="particles"></div>
+
+    <!-- Header -->
+    <header class="glass-header">
+        <nav class="container">
+            <div class="logo">
+                <img src="bot dark logo.png" alt="Channel Monitor" class="logo-img">
+                <span class="logo-text">Channel<span class="highlight">Monitor</span></span>
+            </div>
+            <div class="nav-links">
+                <a href="#features" class="nav-link">Imkoniyatlar</a>
+                <a href="#how" class="nav-link">Qanday ishlaydi</a>
+                <a href="#pricing" class="nav-link">Narxlar</a>
+                <a href="https://t.me/take_newsbot" class="btn-primary glow">
+                    <span>Botni Boshlash</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 0L16 8L8 16L6.6 14.6L12.2 9H0V7H12.2L6.6 1.4L8 0Z" fill="currentColor"/>
+                    </svg>
+                </a>
+            </div>
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="pulse-dot"></span>
+                    Real-Time Monitoring
+                </div>
+                <h1 class="hero-title">
+                    Telegram Kanallarni
+                    <span class="gradient-text">Avtomatik</span>
+                    Kuzating
+                </h1>
+                <p class="hero-subtitle">
+                    Sevimli kanallaringizdan yangi postlarni 1 soniya ichida oling.
+                    <br>Filtrlar, statistika va ko'p boshqa imkoniyatlar.
+                </p>
+                <div class="hero-buttons">
+                    <a href="https://t.me/take_newsbot" class="btn-hero glow">
+                        <span>Bepul Boshlash</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M10 0L20 10L10 20L8 18L15 11H0V9H15L8 2L10 0Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                    <a href="#how" class="btn-secondary">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM9 15V9H11V15H9ZM9 7V5H11V7H9Z" fill="currentColor"/>
+                        </svg>
+                        <span>Qanday ishlaydi</span>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="1000">0</div>
+                        <div class="stat-label">Faol Foydalanuvchi</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="50000">0</div>
+                        <div class="stat-label">Yuborilgan Post</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="99">0</div>
+                        <div class="stat-label">% Tezlik</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <div class="telegram-ui">
+                            <div class="tg-message">
+                                <div class="tg-avatar">📰</div>
+                                <div class="tg-content">
+                                    <div class="tg-name">Kun.uz</div>
+                                    <div class="tg-text">Yangi post keldi!</div>
+                                </div>
+                                <div class="tg-time">Hozir</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Imkoniyatlar</span>
+                <h2 class="section-title">Kuchli Vositalar</h2>
+                <p class="section-subtitle">Telegram kanallarni kuzatish uchun kerakli barcha imkoniyatlar</p>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="feature-icon">
+                        <div class="icon-bg"></div>
+                        <span>⚡</span>
+                    </div>
+                    <h3>Real-Time Monitoring</h3>
+                    <p>Kanalga post yuklangandan 1-2 soniya ichida sizga yetib keladi</p>
+                    <div class="feature-link">
+                        Batafsil →
+                    </div>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <div class="icon-bg"></div>
+                        <span>🎯</span>
+                    </div>
+                    <h3>Aqlli Filtrlar</h3>
+                    <p>Kalit so'zlar, media turi va boshqa parametrlar bo'yicha filtrlar</p>
+                    <div class="feature-link">
+                        Batafsil →
+                    </div>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <div class="icon-bg"></div>
+                        <span>👥</span>
+                    </div>
+                    <h3>Guruh Integratsiyasi</h3>
+                    <p>Postlarni shaxsiy chat yoki guruhga avtomatik yuborish</p>
+                    <div class="feature-link">
+                        Batafsil →
+                    </div>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <div class="icon-bg"></div>
+                        <span>✏️</span>
+                    </div>
+                    <h3>Custom Prefix</h3>
+                    <p>Har bir postga o'z matningizni qo'shing</p>
+                    <div class="feature-link">
+                        Batafsil →
+                    </div>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <div class="icon-bg"></div>
+                        <span>📊</span>
+                    </div>
+                    <h3>Statistika</h3>
+                    <p>Qancha post yuborilganini real-time kuzatib boring</p>
+                    <div class="feature-link">
+                        Batafsil →
+                    </div>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-icon">
+                        <div class="icon-bg"></div>
+                        <span>🔒</span>
+                    </div>
+                    <h3>Xavfsizlik</h3>
+                    <p>Ma'lumotlaringiz shifrlangan va to'liq himoyalangan</p>
+                    <div class="feature-link">
+                        Batafsil →
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Qanday ishlaydi</span>
+                <h2 class="section-title">4 Oddiy Qadam</h2>
+                <p class="section-subtitle">Bir necha daqiqada ishga tushiring</p>
+            </div>
+            <div class="steps-container">
+                <div class="step-line"></div>
+                <div class="step" data-aos="fade-right">
+                    <div class="step-number">
+                        <span>01</span>
+                        <div class="step-circle"></div>
+                    </div>
+                    <div class="step-content">
+                        <h3>Botni Boshlang</h3>
+                        <p>Telegram da botga /start buyrug'ini yuboring va ro'yxatdan o'ting</p>
+                    </div>
+                </div>
+                <div class="step" data-aos="fade-left">
+                    <div class="step-number">
+                        <span>02</span>
+                        <div class="step-circle"></div>
+                    </div>
+                    <div class="step-content">
+                        <h3>Kanal Qo'shing</h3>
+                        <p>Kuzatmoqchi bo'lgan kanallaringizni qo'shing (50 tagacha bepul)</p>
+                    </div>
+                </div>
+                <div class="step" data-aos="fade-right">
+                    <div class="step-number">
+                        <span>03</span>
+                        <div class="step-circle"></div>
+                    </div>
+                    <div class="step-content">
+                        <h3>Sozlamalarni O'rnating</h3>
+                        <p>Filtrlar, prefix va boshqa sozlamalarni o'zgartiring</p>
+                    </div>
+                </div>
+                <div class="step" data-aos="fade-left">
+                    <div class="step-number">
+                        <span>04</span>
+                        <div class="step-circle"></div>
+                    </div>
+                    <div class="step-content">
+                        <h3>Postlarni Oling</h3>
+                        <p>Yangi postlar avtomatik va real-time sizga keladi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Narxlar</span>
+                <h2 class="section-title">O'zingizga Mos Rejani Tanlang</h2>
+                <p class="section-subtitle">Bepul boshlab, keyin Premium ga o'ting</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card" data-aos="zoom-in">
+                    <div class="pricing-header">
+                        <h3>Bepul</h3>
+                        <div class="price">
+                            <span class="currency">0</span>
+                            <span class="period">so'm</span>
+                        </div>
+                        <p>Boshlash uchun ideal</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7 10L9 12L13 8M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z" stroke="#0088cc" stroke-width="2"/>
+                            </svg>
+                            <span>50 tagacha kanal</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7 10L9 12L13 8M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z" stroke="#0088cc" stroke-width="2"/>
+                            </svg>
+                            <span>Real-time monitoring</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7 10L9 12L13 8M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z" stroke="#0088cc" stroke-width="2"/>
+                            </svg>
+                            <span>Barcha filtrlar</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7 10L9 12L13 8M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z" stroke="#0088cc" stroke-width="2"/>
+                            </svg>
+                            <span>Statistika</span>
+                        </li>
+                    </ul>
+                    <a href="https://t.me/take_newsbot" class="btn-pricing">
+                        Boshlash
+                    </a>
+                </div>
+                <div class="pricing-card featured" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="popular-badge">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M8 0L10 6H16L11 10L13 16L8 12L3 16L5 10L0 6H6L8 0Z" fill="currentColor"/>
+                        </svg>
+                        Mashhur
+                    </div>
+                    <div class="pricing-header">
+                        <h3>Premium</h3>
+                        <div class="price">
+                            <span class="currency">50,000</span>
+                            <span class="period">so'm/oy</span>
+                        </div>
+                        <p>Professional foydalanuvchilar uchun</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7 10L9 12L13 8M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z" stroke="#0088cc" stroke-width="2"/>
+                            </svg>
+                            <span>200 tagacha kanal</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7 10L9 12L13 8M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z" stroke="#0088cc" stroke-width="2"/>
+                            </svg>
+                            <span>Real-time monitoring</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7 10L9 12L13 8M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z" stroke="#0088cc" stroke-width="2"/>
+                            </svg>
+                            <span>Barcha filtrlar</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7 10L9 12L13 8M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z" stroke="#0088cc" stroke-width="2"/>
+                            </svg>
+                            <span>Kengaytirilgan statistika</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7 10L9 12L13 8M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z" stroke="#0088cc" stroke-width="2"/>
+                            </svg>
+                            <span>Prioritet qo'llab-quvvatlash</span>
+                        </li>
+                    </ul>
+                    <a href="https://t.me/take_newsbot" class="btn-pricing glow">
+                        Premium Olish
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Bugun Boshlab Ko'ring</h2>
+                <p>Minglab foydalanuvchilar allaqachon Channel Monitor dan foydalanmoqda</p>
+                <a href="https://t.me/take_newsbot" class="btn-cta glow">
+                    <span>Bepul Boshlash</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M10 0L20 10L10 20L8 18L15 11H0V9H15L8 2L10 0Z" fill="currentColor"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <img src="bot dark logo.png" alt="Channel Monitor" class="logo-img">
+                        <span class="logo-text">Channel<span class="highlight">Monitor</span></span>
+                    </div>
+                    <p>Telegram kanallarni kuzatishning eng oson yo'li</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Mahsulot</h4>
+                        <a href="#features">Imkoniyatlar</a>
+                        <a href="#pricing">Narxlar</a>
+                        <a href="#">Yangiliklar</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Qo'llab-quvvatlash</h4>
+                        <a href="#">Yordam</a>
+                        <a href="#">FAQ</a>
+                        <a href="#">Bog'lanish</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Huquqiy</h4>
+                        <a href="#">Maxfiylik</a>
+                        <a href="#">Shartlar</a>
+                        <a href="#">Litsenziya</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Channel Monitor. Barcha huquqlar himoyalangan.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
