@@ -49,12 +49,12 @@ class EventMonitoringService:
         # Create handler function
         async def handle_channel_message(client: Client, message: Message):
             """Handle new messages from channels"""
-            logger.debug(f"🔔 Received message from channel {message.chat.id} (msg_id: {message.id})")
+            logger.info(f"🔔 Received message from channel {message.chat.id} (msg_id: {message.id})")
             if message.chat.id in self.monitored_channels:
-                logger.debug(f"✅ Channel {message.chat.id} is monitored, processing...")
+                logger.info(f"✅ Channel {message.chat.id} is monitored, processing...")
                 await self._process_new_message(message)
             else:
-                logger.debug(f"⏭️ Channel {message.chat.id} not in monitored list: {self.monitored_channels}")
+                logger.warning(f"⏭️ Channel {message.chat.id} NOT in monitored list. Monitored: {self.monitored_channels}")
         
         # Register handler
         self.userbot.add_handler(MessageHandler(handle_channel_message, filters.channel))
@@ -108,11 +108,12 @@ class EventMonitoringService:
                 removed = self.monitored_channels - channel_ids
                 
                 if added:
-                    logger.info(f"Added {len(added)} channels to monitoring")
+                    logger.info(f"✅ Added {len(added)} channels to monitoring: {added}")
                 if removed:
-                    logger.info(f"Removed {len(removed)} channels from monitoring")
+                    logger.info(f"❌ Removed {len(removed)} channels from monitoring: {removed}")
                 
                 self.monitored_channels = channel_ids
+                logger.info(f"📊 Currently monitoring {len(self.monitored_channels)} channels: {self.monitored_channels}")
             
         except Exception as e:
             logger.error(f"Error updating monitored channels: {e}")
@@ -143,7 +144,7 @@ class EventMonitoringService:
                     logger.debug(f"Message {message.id} already processed (last: {channel.last_message_id})")
                     return
                 
-                logger.info(f"New message in channel {channel.title}: {message.id}")
+                logger.info(f"📨 New message in channel {channel.title}: {message.id}")
                 
                 # Get all active subscriptions for this channel with eager loading
                 result = await session.execute(
@@ -161,6 +162,8 @@ class EventMonitoringService:
                     )
                 )
                 subscriptions = result.scalars().all()
+                
+                logger.info(f"👥 Found {len(subscriptions)} active subscriptions for this channel")
                 
                 # Forward to all subscribers
                 for subscription in subscriptions:
