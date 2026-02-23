@@ -186,12 +186,16 @@ class EventMonitoringService:
         try:
             logger.debug(f"Attempting to forward message {message.id} for subscription {subscription.id}")
             
-            # Check Redis cache for deduplication
-            if self.redis:
-                cache_key = f"fwd:{subscription.id}:{message.id}"
-                if await self.redis.exists(cache_key):
-                    logger.debug(f"Message {message.id} already forwarded (Redis cache)")
-                    return
+            # Check Redis cache for deduplication (optional)
+            try:
+                if self.redis:
+                    cache_key = f"fwd:{subscription.id}:{message.id}"
+                    if await self.redis.exists(cache_key):
+                        logger.debug(f"Message {message.id} already forwarded (Redis cache)")
+                        return
+            except Exception as redis_error:
+                logger.warning(f"Redis check failed: {redis_error}. Continuing without cache.")
+                self.redis = None  # Disable Redis for future attempts
             
             # Apply filters
             filter_result = self._apply_filters(subscription, message)
@@ -248,10 +252,14 @@ class EventMonitoringService:
             
             await session.commit()
             
-            # Cache in Redis
-            if self.redis:
-                cache_key = f"fwd:{subscription.id}:{message.id}"
-                await self.redis.setex(cache_key, 86400, "1")
+            # Cache in Redis (optional)
+            try:
+                if self.redis:
+                    cache_key = f"fwd:{subscription.id}:{message.id}"
+                    await self.redis.setex(cache_key, 86400, "1")
+            except Exception as redis_error:
+                logger.warning(f"Redis cache failed: {redis_error}. Continuing without cache.")
+                self.redis = None  # Disable Redis for future attempts
             
         except Exception as e:
             logger.error(f"Forward error: {e}")
